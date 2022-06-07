@@ -13,12 +13,12 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('School') }}
+                                {{ __('Escuela de Conducción') }}
                             </span>
 
                              <div class="float-right">
                                 <a href="{{ route('schools.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Create New') }}
+                                  {{ __('Crear Nuevo') }}
                                 </a>
                               </div>
                         </div>
@@ -35,7 +35,7 @@
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
-                                        
+
 										<th>Nombre</th>
 										<th>Tipolicencia</th>
 										<th>Uso</th>
@@ -50,7 +50,7 @@
                                     @foreach ($schools as $school)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            
+
 											<td>{{ $school->nombre }}</td>
 											<td>{{ $school->tipolicencia }}</td>
 											<td>{{ $school->uso }}</td>
@@ -60,11 +60,11 @@
 
                                             <td>
                                                 <form action="{{ route('schools.destroy',$school->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('schools.show',$school->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('schools.edit',$school->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('schools.show',$school->id) }}"><i class="fa fa-fw fa-eye"></i> Detalles</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('schools.edit',$school->id) }}"><i class="fa fa-fw fa-edit"></i> Editar</a>
                                                     @csrf
                                                     @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
+                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Eliminar</button>
                                                 </form>
                                             </td>
                                         </tr>

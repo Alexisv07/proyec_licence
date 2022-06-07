@@ -11,15 +11,15 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show School</span>
+                            <span class="card-title">Datos Registrados</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('schools.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('schools.index') }}"> Regresar</a>
                         </div>
                     </div>
 
                     <div class="card-body">
-                        
+
                         <div class="form-group">
                             <strong>Nombre:</strong>
                             {{ $school->nombre }}
